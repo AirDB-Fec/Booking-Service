@@ -1,8 +1,12 @@
 const express = require('express');
 const routes = require('./../routes');
 const path = require('path');
+var bodyParser = require('body-parser');
 
 const app = express();
+
+const jsonParser = bodyParser.json();
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.set('port', process.env.PORT || 3001);
 
@@ -18,6 +22,7 @@ app.get('/rooms/:id', function(req, res) {
   res.sendFile(reactPath);
 });
 
+app.use(jsonParser);
 app.use('/api', routes);
 
 module.exports = app;

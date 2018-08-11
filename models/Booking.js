@@ -20,4 +20,22 @@ const BookingSchema = new Schema({
 
 const Booking = mongoose.model('Booking', BookingSchema);
 
+
+
+CREATE TABLE room_info (
+  roomId INTEGER,
+  numberOfBookings INTEGER,
+  price INTEGER,
+  cleaningFee INTEGER,
+  serviceFee INTEGER,
+  minimumStay INTEGER,
+  maxAdults INTEGER,
+  maxChildren INTEGER,
+  maxInfants INTEGER,
+  taxes INTEGER,
+  funFactTitles VARCHAR(40),
+  funFacts VARCHAR(40),
+  PRIMARY KEY (roomId)
+);
+
 module.exports = Booking;
