@@ -1,8 +1,8 @@
 const faker = require('faker');
 
 const names = function() {
-
-  for (let num = 1; num < 10000001; num ++) {
+  var counter = 49487899;
+  for (let num = 9000001; num < 10000001; num ++) {
     let numberOfBookings = faker.random.number({
       min: 1,
       max: 10
@@ -14,9 +14,9 @@ const names = function() {
         min: 1,
         max: 31
       });
-      console.log(`${num},${numberOfBookings},${checkIn},${duration}`);
+      counter ++;
+      console.log(`${counter},${num},${numberOfBookings},${checkIn},${duration}`);
     }
-    num++;
   }
 
 };

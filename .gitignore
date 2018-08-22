@@ -28,3 +28,7 @@ dist/
 # AWS
 aws-keys.json
 
+# csv files
+csv-files-cassandra/
+csv-files-postgres/
+

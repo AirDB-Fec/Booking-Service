@@ -12,6 +12,7 @@
     "start": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
     "test": "jest",
+    "stress-test": "node benchmark.js",
     "start:pro": "node generate.js && node server/",
     "build": "webpack -d && grunt deploy"
   },
@@ -35,11 +36,17 @@
     "body-parser": "^1.18.3",
     "date-fns": "^1.29.0",
     "express": "^4.16.3",
+    "express-promise-router": "^3.0.3",
     "mongoose": "^5.2.4",
+    "newrelic": "^4.8.0",
+    "node-siege": "0.0.4",
     "npm": "^6.2.0",
+    "pg": "^7.4.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-fontawesome": "^1.6.1"
+    "react-fontawesome": "^1.6.1",
+    "redis": "^2.8.0",
+    "siege": "^0.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
