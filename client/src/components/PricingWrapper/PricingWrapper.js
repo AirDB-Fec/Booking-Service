@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class PricingWrapper extends Component {
   render() {
@@ -6,8 +6,8 @@ class PricingWrapper extends Component {
     if (this.props.roomData) {
       totalBookingPrice =
         this.props.roomData.price * this.props.bookingDuration +
-        this.props.roomData.serviceFee +
-        this.props.roomData.cleaningFee +
+        this.props.roomData.servicefee +
+        this.props.roomData.cleaningfee +
         this.props.roomData.taxes;
     }
 
@@ -17,8 +17,8 @@ class PricingWrapper extends Component {
           <div className="pricing-container">
             <div className="pricing-subcontainer">
               <p className="pricing-item">
-                ${this.props.roomData.price} x {this.props.bookingDuration}{' '}
-                {this.props.bookingDuration > 1 ? 'nights' : 'night'}
+                ${this.props.roomData.price} x {this.props.bookingDuration}{" "}
+                {this.props.bookingDuration > 1 ? "nights" : "night"}
               </p>
               <p className="pricing-item">
                 ${this.props.roomData.price * this.props.bookingDuration}
@@ -26,11 +26,11 @@ class PricingWrapper extends Component {
             </div>
             <div className="pricing-subcontainer">
               <p className="pricing-item"> Service fee</p>
-              <p className="pricing-item">${this.props.roomData.serviceFee}</p>
+              <p className="pricing-item">${this.props.roomData.servicefee}</p>
             </div>
             <div className="pricing-subcontainer">
               <p className="pricing-item">Cleaning fee</p>
-              <p className="pricing-item">${this.props.roomData.cleaningFee}</p>
+              <p className="pricing-item">${this.props.roomData.cleaningfee}</p>
             </div>
             <div className="pricing-subcontainer">
               <p className="pricing-item"> Occupancy taxes and fees</p>

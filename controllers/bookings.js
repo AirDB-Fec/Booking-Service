@@ -7,7 +7,7 @@ module.exports = {
     var id = req.params.id;
     const query = {
       text:
-        "SELECT room_infos.*, ARRAY_TO_STRING((SELECT ARRAY_AGG('[' || numberofbookings || ',' || checkin || ',' || duration || ']') FROM bookings_infov WHERE room_infos.roomid = bookings_infov.roomid), '') FROM room_infos WHERE room_infos.roomid = $1",
+        "SELECT room_infos.*, ARRAY_TO_STRING((SELECT ARRAY_AGG('[' || numberofbookings || ',\"' || checkin || '\",' || duration || ']' || ',') FROM bookings_infov WHERE room_infos.roomid = bookings_infov.roomid), '') FROM room_infos WHERE room_infos.roomid = $1",
       values: [id]
     };
     db.query(query, (err, res) => {

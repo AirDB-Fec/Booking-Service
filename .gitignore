@@ -32,3 +32,6 @@ aws-keys.json
 csv-files-cassandra/
 csv-files-postgres/
 
+#new relic
+newrelic.js
+
