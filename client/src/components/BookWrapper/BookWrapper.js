@@ -96,10 +96,10 @@ class BookWrapper extends Component {
             <div className="book-funfact-container">
               <div className="book-funfact">
                 <h3 className="book-funfact-title">
-                  {this.props.roomData.funFactTitles}
+                  {this.props.roomData.funfacttitles}
                 </h3>
                 <p className="book-funfact-comment">
-                  {this.props.roomData.funFacts}
+                  {this.props.roomData.funfacts}
                 </p>
               </div>
               <FontAwesome
